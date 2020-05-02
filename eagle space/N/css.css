@@ -1,0 +1,19 @@
+body{
+	font-family: 'Lato', sans-serif;
+}
+img{
+	background-color: black;
+}
+#logo{
+    width: 200px;
+    height: 76px;
+    padding: 25px;
+    float: left;
+}
+#scrol > a{ 
+	font-size: 50px;
+	color: black;
+	text-decoration: none;
+	padding-left: 80px;
+	padding-left: 80px;
+}
