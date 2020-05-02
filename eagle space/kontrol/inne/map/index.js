@@ -6,8 +6,16 @@ var Stadia_AlidadeSmoothDark = L.tileLayer('https://{s}.tile.openstreetmap.org/{
 	maxZoom: 20,
 	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 }).addTo(map);
-var s1 = L.marker([0, 0]).addTo(map);
-var s2 = L.marker([0, 0]).addTo(map);
+var Racker = L.icon({
+    iconUrl: 'RacketICON.png',
+    iconSize:     [100, 200], // size of the icon
+});
+var Land = L.icon({
+  iconUrl: 'RacketLandICON.png',
+  iconSize:     [100, 200], // size of the icon
+});
+var s1 = L.marker([0, 0], {icon: Land}).addTo(map);
+var s2 = L.marker([0, 0], {icon: Racker}).addTo(map);
 setInterval(function rack(){
     fetch('https://ciszek1.github.io/eagle space/kontrol/dan.txt')
   .then(response => response.json())
