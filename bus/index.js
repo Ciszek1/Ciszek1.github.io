@@ -17,7 +17,7 @@ async function Autobusy(){
     let data = await response.json();
     console.log(data);
     function onClick(e) {
-        this.openTooltip();
+        this.openPopup();
     }
     data.Vehicles.forEach(element => {
         console.log("Linia"+element.Line+"LAT:"+element.Lat+"LON:"+element.Lon);
@@ -25,7 +25,7 @@ async function Autobusy(){
         .addTo(map)
         .on('mouseover', onClick)
         .on('tooltipclose', onClick)
-        //.bindPopup(element.Line)
+        .bindPopup(element.Line)
         //.openPopup()
         .bindTooltip(element.Line)
         .openTooltip();
